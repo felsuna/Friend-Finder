@@ -15,5 +15,3 @@ app.listen(PORT, ()=>{
     console.log(`App listening on PORT: http://localhost:${PORT}`)
 });
 
-// test
-

@@ -30,22 +30,113 @@
                     <div class="card-body">
                         <form role="form">
                             <div class="form-group">
-                                <label for="reserve-name">Name</label>
-                                <input type="text" class="form-control" id="reserve-name" required placeholder="Enter Your Name">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" id="name" required placeholder="Enter Your Name">
                             </div>
                             <div class="form-group">
-                                <label for="reserve-phone">Link to Photo Image</label>
-                                <input type="text" class="form-control" id="reserve-phone" required placeholder="Link Your Image">
+                                <label for="photo">Link to Photo Image</label>
+                                <input type="text" class="form-control" id="photo" required placeholder="Link Your Image">
                             </div>
                             <div class="form-group">
                                 <h5>
                                     <label for="sel1">Question 1:</label>
                                 </h5>
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium?</p>
                                 <select class="form-control" id="sel1">
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                                <h5>
+                                    <label for="sel1">Question 2:</label>
+                                </h5>
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium?</p>
+                                <select class="form-control" id="sel2">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                                <h5>
+                                    <label for="sel1">Question 3:</label>
+                                </h5>
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium?</p>
+                                <select class="form-control" id="sel3">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                                <h5>
+                                    <label for="sel1">Question 4:</label>
+                                </h5>
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium?</p>
+                                <select class="form-control" id="sel4">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                                <h5>
+                                    <label for="sel1">Question 5:</label>
+                                </h5>
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium?</p>
+                                <select class="form-control" id="sel5">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                                <h5>
+                                    <label for="sel1">Question 6:</label>
+                                </h5>
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium?</p>
+                                <select class="form-control" id="sel6">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                                <h5>
+                                    <label for="sel1">Question 7:</label>
+                                </h5>
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium?</p>
+                                <select class="form-control" id="sel7">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                                <h5>
+                                    <label for="sel1">Question 8:</label>
+                                </h5>
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium?</p>
+                                <select class="form-control" id="sel8">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                                <h5>
+                                    <label for="sel1">Question 9:</label>
+                                </h5>
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium?</p>
+                                <select class="form-control" id="sel9">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                                <h5>
+                                    <label for="sel1">Question 10:</label>
+                                </h5>
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium?</p>
+                                <select class="form-control" id="sel10">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
                                 </select>
                             </div>
                             <button type="submit" class="btn btn-primary submit" id="submit">Submit</button>
@@ -70,9 +161,27 @@
     <script type="text/javascript">
         $("#submit").on("click", (event) => {
             event.preventDefault();
+            var body = {
+                name: $("#name").val(),
+                photo: $("#photo").val(),
+                score1: $("#sel1").val(),
+                score2: $("#sel2").val(),
+                score3: $("#sel3").val(),
+                score4: $("#sel4").val(),
+                score5: $("#sel5").val(),
+                score6: $("#sel6").val(),
+                score7: $("#sel7").val(),
+                score8: $("#sel8").val(),
+                score9: $("#sel9").val(),
+                score10: $("#sel10").val()
+            }
+            $.post("/api/friends", body, function(data){
+                console.log(data)
 
-            console.log("test")
-        })
+                // use BS open modal JS
+                // use jq to insert your friedn into the modal id's
+            })
+        });
 
     </script>
 
