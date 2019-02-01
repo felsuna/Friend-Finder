@@ -4,8 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Survey Page</title>
-
-    <!-- Latest compiled and minified CSS & JS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery.js"></script>
@@ -50,7 +48,7 @@
                                     <option>4</option>
                                 </select>
                             </div>
-                            <button type="submit" class="btn btn-primary submit">Submit</button>
+                            <button type="submit" class="btn btn-primary submit" id="submit">Submit</button>
                         </form>
                     </div>
                 </div>
@@ -68,6 +66,15 @@
         </footer>
 
     </div>
+
+    <script type="text/javascript">
+        $("#submit").on("click", (event) => {
+            event.preventDefault();
+
+            console.log("test")
+        })
+
+    </script>
 
 </body>
 
