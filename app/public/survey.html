@@ -139,7 +139,8 @@
                                     <option value="4">4</option>
                                 </select>
                             </div>
-                            <button type="submit" class="btn btn-primary submit" id="submit">Submit</button>
+                            <button type="submit" class="btn btn-primary submit" id="submit" data-toggle="modal"
+                                data-target="#exampleModalCenter">Submit</button>
                         </form>
                     </div>
                 </div>
@@ -162,8 +163,8 @@
         $("#submit").on("click", (event) => {
             event.preventDefault();
             var body = {
-                name: $("#name").val(),
-                photo: $("#photo").val(),
+                name: $("#name").val().trim(),
+                photo: $("#photo").val().trim(),
                 score1: $("#sel1").val(),
                 score2: $("#sel2").val(),
                 score3: $("#sel3").val(),
@@ -174,12 +175,28 @@
                 score8: $("#sel8").val(),
                 score9: $("#sel9").val(),
                 score10: $("#sel10").val()
-            }
-            $.post("/api/friends", body, function(data){
-                console.log(data)
+            };
+
+            $.post("/api/friends", body, function (data) {
+                console.log(data);
+
+                $("#name").val('');
+                $("#photo").val('');
+                $("#sel1").val('');
+                $("#sel2").val('');
+                $("#sel3").val('');
+                $("#sel4").val('');
+                $("#sel5").val('');
+                $("#sel6").val('');
+                $("#sel7").val('');
+                $("#sel8").val('');
+                $("#sel9").val('');
+                $("#sel10").val('');
 
                 // use BS open modal JS
+                
                 // use jq to insert your friedn into the modal id's
+
             })
         });
 
