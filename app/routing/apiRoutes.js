@@ -1,4 +1,3 @@
-// const friends = require("./app/data/friends.js");
 const friends = require("../data/friends.js");
 
 module.exports = (app) => {
@@ -18,32 +17,28 @@ module.exports = (app) => {
             req.body.score8,
             req.body.score9,
             req.body.score10,
-        ]
+        ];
 
-        // this loop will go 3 times
+        // Loop through friends
         var chosenFriend = {
             diff: 100,
             index: 0
-        }
+        };
         for (let i = 0; i < friends.length; i++) {
             var diff = 0
             var index 
               for (let j = 0; j < friends[i].scores.length; j++) {
                 diff += Math.abs(friends[i].scores[j] - myValues[j])
                 index = i
-              }
+              };
             console.log(diff);
               if (diff < chosenFriend.diff){
                   chosenFriend.diff = diff
                   chosenFriend.index = index
-              }
-        }
+              };
+        };
 
-        console.log(chosenFriend);
-
-
-        
-
+        console.log(chosenFriend);    
         
         res.send(friends[chosenFriend.index]);
     });

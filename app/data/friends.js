@@ -1,4 +1,3 @@
-
 const friends = [
     {
         "name":"Ahmed",
@@ -48,6 +47,6 @@ const friends = [
             4
           ]
       }
-]
+];
 
   module.exports = friends;
