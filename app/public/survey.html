@@ -42,7 +42,7 @@
                                     <label for="sel1">Question 1:</label>
                                 </h5>
                                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium?</p>
-                                <select class="form-control" id="sel1">
+                                <select class="form-control" id="q1">
                                     <option value="1">1 (Strongly Disagree)</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -53,7 +53,7 @@
                                     <label for="sel1">Question 2:</label>
                                 </h5>
                                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium?</p>
-                                <select class="form-control" id="sel2">
+                                <select class="form-control" id="q2">
                                         <option value="1">1 (Strongly Disagree)</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
@@ -64,7 +64,7 @@
                                     <label for="sel1">Question 3:</label>
                                 </h5>
                                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium?</p>
-                                <select class="form-control" id="sel3">
+                                <select class="form-control" id="q3">
                                         <option value="1">1 (Strongly Disagree)</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
@@ -75,7 +75,7 @@
                                     <label for="sel1">Question 4:</label>
                                 </h5>
                                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium?</p>
-                                <select class="form-control" id="sel4">
+                                <select class="form-control" id="q4">
                                         <option value="1">1 (Strongly Disagree)</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
@@ -86,7 +86,7 @@
                                     <label for="sel1">Question 5:</label>
                                 </h5>
                                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium?</p>
-                                <select class="form-control" id="sel5">
+                                <select class="form-control" id="q5">
                                         <option value="1">1 (Strongly Disagree)</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
@@ -97,7 +97,7 @@
                                     <label for="sel1">Question 6:</label>
                                 </h5>
                                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium?</p>
-                                <select class="form-control" id="sel6">
+                                <select class="form-control" id="q6">
                                         <option value="1">1 (Strongly Disagree)</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
@@ -108,7 +108,7 @@
                                     <label for="sel1">Question 7:</label>
                                 </h5>
                                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium?</p>
-                                <select class="form-control" id="sel7">
+                                <select class="form-control" id="q7">
                                         <option value="1">1 (Strongly Disagree)</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
@@ -119,7 +119,7 @@
                                     <label for="sel1">Question 8:</label>
                                 </h5>
                                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium?</p>
-                                <select class="form-control" id="sel8">
+                                <select class="form-control" id="q8">
                                         <option value="1">1 (Strongly Disagree)</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
@@ -130,7 +130,7 @@
                                     <label for="sel1">Question 9:</label>
                                 </h5>
                                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium?</p>
-                                <select class="form-control" id="sel9">
+                                <select class="form-control" id="q9">
                                         <option value="1">1 (Strongly Disagree)</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
@@ -141,7 +141,7 @@
                                     <label for="sel1">Question 10:</label>
                                 </h5>
                                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium?</p>
-                                <select class="form-control" id="sel10">
+                                <select class="form-control" id="q10">
                                         <option value="1">1 (Strongly Disagree)</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
@@ -175,16 +175,16 @@
             var body = {
                 name: $("#name").val().trim(),
                 photo: $("#photo").val().trim(),
-                score1: $("#sel1").val(),
-                score2: $("#sel2").val(),
-                score3: $("#sel3").val(),
-                score4: $("#sel4").val(),
-                score5: $("#sel5").val(),
-                score6: $("#sel6").val(),
-                score7: $("#sel7").val(),
-                score8: $("#sel8").val(),
-                score9: $("#sel9").val(),
-                score10: $("#sel10").val()
+                score1: $("#q1").val(),
+                score2: $("#q2").val(),
+                score3: $("#q3").val(),
+                score4: $("#q4").val(),
+                score5: $("#q5").val(),
+                score6: $("#q6").val(),
+                score7: $("#q7").val(),
+                score8: $("#q8").val(),
+                score9: $("#q9").val(),
+                score10: $("#q10").val()
             };
 
             $.post("/api/friends", body, function (data) {
@@ -192,16 +192,16 @@
 
                 $("#name").val('');
                 $("#photo").val('');
-                $("#sel1").val('');
-                $("#sel2").val('');
-                $("#sel3").val('');
-                $("#sel4").val('');
-                $("#sel5").val('');
-                $("#sel6").val('');
-                $("#sel7").val('');
-                $("#sel8").val('');
-                $("#sel9").val('');
-                $("#sel10").val('');
+                $("#q1").val('');
+                $("#q2").val('');
+                $("#q3").val('');
+                $("#q4").val('');
+                $("#q5").val('');
+                $("#q6").val('');
+                $("#q7").val('');
+                $("#q8").val('');
+                $("#q9").val('');
+                $("#q10").val('');
 
                 // use BS open modal JS
                 
