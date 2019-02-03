@@ -28,13 +28,13 @@
                         <h5>About You</h5>
                     </div>
                     <div class="card-body">
-                        <form role="form">
+                        <form role="form" class="needs-validation" novalidate>
                             <div class="form-group">
                                 <label for="name">Name</label>
                                 <input type="text" class="form-control" id="name" required placeholder="Enter Your Name">
                             </div>
                             <div class="form-group">
-                                <label for="photo">Link to Photo Image</label>
+                                <label for="photo">Link to Image</label>
                                 <input type="text" class="form-control" id="photo" required placeholder="Link Your Image">
                             </div>
                             <div class="form-group">
@@ -43,6 +43,7 @@
                                 </h5>
                                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium?</p>
                                 <select class="custom-select" id="q1">
+                                    <option value="0" selected>Please select an option</option>
                                     <option value="1">1 (Strongly Disagree)</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -54,6 +55,7 @@
                                 </h5>
                                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium?</p>
                                 <select class="custom-select" id="q2">
+                                    <option value="0" selected>Please select an option</option>
                                     <option value="1">1 (Strongly Disagree)</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -65,6 +67,7 @@
                                 </h5>
                                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium?</p>
                                 <select class="custom-select" id="q3">
+                                    <option value="0" selected>Please select an option</option>
                                     <option value="1">1 (Strongly Disagree)</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -76,6 +79,7 @@
                                 </h5>
                                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium?</p>
                                 <select class="custom-select" id="q4">
+                                    <option value="0" selected>Please select an option</option>
                                     <option value="1">1 (Strongly Disagree)</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -87,6 +91,7 @@
                                 </h5>
                                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium?</p>
                                 <select class="custom-select" id="q5">
+                                    <option value="0" selected>Please select an option</option>
                                     <option value="1">1 (Strongly Disagree)</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -98,6 +103,7 @@
                                 </h5>
                                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium?</p>
                                 <select class="custom-select" id="q6">
+                                    <option value="0" selected>Please select an option</option>
                                     <option value="1">1 (Strongly Disagree)</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -109,6 +115,7 @@
                                 </h5>
                                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium?</p>
                                 <select class="custom-select" id="q7">
+                                    <option value="0" selected>Please select an option</option>
                                     <option value="1">1 (Strongly Disagree)</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -120,6 +127,7 @@
                                 </h5>
                                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium?</p>
                                 <select class="custom-select" id="q8">
+                                    <option value="0" selected>Please select an option</option>
                                     <option value="1">1 (Strongly Disagree)</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -131,6 +139,7 @@
                                 </h5>
                                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium?</p>
                                 <select class="custom-select" id="q9">
+                                    <option value="0" selected>Please select an option</option>
                                     <option value="1">1 (Strongly Disagree)</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -142,6 +151,7 @@
                                 </h5>
                                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium?</p>
                                 <select class="custom-select" id="q10">
+                                    <option value="0" selected>Please select an option</option>
                                     <option value="1">1 (Strongly Disagree)</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -150,7 +160,7 @@
                                 </select>
                             </div>
                             <!-- Modal Button -->
-                            <button type="submit" class="btn btn-primary submit" data-toggle="modal" data-target="#exampleModalCenter" id="submit">Submit</button>
+                            <button type="submit" class="btn btn-primary submit" id="submit">Submit</button>
                         </form>
                     </div>
                 </div>
@@ -165,72 +175,75 @@
                     <a href="https://github.com/felsuna">GitHub Repo</a>
             </div>
         </footer>
-      
-      <!-- Modal -->
-      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLongTitle">Best Match</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
+
+        <!-- Modal -->
+        <div id="results-modal" class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Best Match</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h6 id="matched-name"></h6>
+                        <img id="matched-image" src="">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
             </div>
-            <div class="modal-body">
-              ...
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-          </div>
         </div>
-      </div>
 
-    <script type="text/javascript">
-        $("#submit").on("click", (event) => {
-            event.preventDefault();
-            var body = {
-                name: $("#name").val().trim(),
-                photo: $("#photo").val().trim(),
-                score1: $("#q1").val(),
-                score2: $("#q2").val(),
-                score3: $("#q3").val(),
-                score4: $("#q4").val(),
-                score5: $("#q5").val(),
-                score6: $("#q6").val(),
-                score7: $("#q7").val(),
-                score8: $("#q8").val(),
-                score9: $("#q9").val(),
-                score10: $("#q10").val()
-            };
+        <script type="text/javascript">
+            $("#submit").on("click", (event) => {
+                event.preventDefault();
 
-            $.post("/api/friends", body, function (data) {
-                console.log(data)
+                var body = {
+                    name: $("#name").val().trim(),
+                    photo: $("#photo").val().trim(),
+                    score1: $("#q1").val(),
+                    score2: $("#q2").val(),
+                    score3: $("#q3").val(),
+                    score4: $("#q4").val(),
+                    score5: $("#q5").val(),
+                    score6: $("#q6").val(),
+                    score7: $("#q7").val(),
+                    score8: $("#q8").val(),
+                    score9: $("#q9").val(),
+                    score10: $("#q10").val()
+                };
+                //Look into a for in loop to loop through objects to validate inputs
 
-                // use BS open modal JS
+                $.post("/api/friends", body, function (data) {
+                    console.log(data)
 
-                // use jq to insert your friend into the modal id's
+                    //Insert and display matched information with the modal
+                    let matchedName = $("#matched-name");
+                    let matchedImage = $("#matched-image");
+                    matchedName.text(data.name);
+                    matchedImage.attr('src', data.photo);
+                    $("#results-modal").modal("toggle")
 
-                $("#name").val('');
-                $("#photo").val('');
-                $("#q1").val('');
-                $("#q2").val('');
-                $("#q3").val('');
-                $("#q4").val('');
-                $("#q5").val('');
-                $("#q6").val('');
-                $("#q7").val('');
-                $("#q8").val('');
-                $("#q9").val('');
-                $("#q10").val('');
-
-
-
-            })
-        });
-
-    </script>
-
+                    //Clears then form after submitting.
+                    $("#name").val('');
+                    $("#photo").val('');
+                    $("#q1").val('0');
+                    $("#q2").val('0');
+                    $("#q3").val('0');
+                    $("#q4").val('0');
+                    $("#q5").val('0');
+                    $("#q6").val('0');
+                    $("#q7").val('0');
+                    $("#q8").val('0');
+                    $("#q9").val('0');
+                    $("#q10").val('0');
+                })
+            });
+        </script>
 </body>
 
 </html>

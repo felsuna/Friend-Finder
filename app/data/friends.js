@@ -17,7 +17,7 @@ const friends = [
       },
       {
         "name":"Cat",
-        "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        "photo":"https://cdn.shopify.com/s/files/1/0010/9215/7503/t/10/assets/cbt2/images/result-clipboard.png?11937793710462362784",
         "scores":[
             4,
             2,

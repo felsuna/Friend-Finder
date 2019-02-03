@@ -7,19 +7,19 @@ module.exports = (app) => {
 
     app.post("/api/friends", (req, res) => {
         var myValues = [
-            req.body.score1,
-            req.body.score2,
-            req.body.score3,
-            req.body.score4,
-            req.body.score5,
-            req.body.score6,
-            req.body.score7,
-            req.body.score8,
-            req.body.score9,
-            req.body.score10,
+            parseInt(req.body.score1),
+            parseInt(req.body.score2),
+            parseInt(req.body.score3),
+            parseInt(req.body.score4),
+            parseInt(req.body.score5),
+            parseInt(req.body.score6),
+            parseInt(req.body.score7),
+            parseInt(req.body.score8),
+            parseInt(req.body.score9),
+            parseInt(req.body.score10)
         ];
 
-        // Loop through friends
+        // Loop through friends and calulates best match\       
         var chosenFriend = {
             diff: 100,
             index: 0
@@ -39,7 +39,11 @@ module.exports = (app) => {
         };
 
         console.log(chosenFriend);    
-        
+        friends.push({
+            name: req.body.name,
+            photo: req.body.photo,
+            scores: myValues
+        });
         res.send(friends[chosenFriend.index]);
     });
 };
