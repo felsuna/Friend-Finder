@@ -216,7 +216,11 @@
                     score9: $("#q9").val(),
                     score10: $("#q10").val()
                 };
-                //Look into a for in loop to loop through objects to validate inputs
+                // A "for in" loop to loop through objects to validate inputs
+                // $.each(body, function (key, value) {
+                //     console.log(key, value)
+                                       
+                // });
 
                 $.post("/api/friends", body, function (data) {
                     console.log(data)
