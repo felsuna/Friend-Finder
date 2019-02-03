@@ -10,7 +10,7 @@ It is deployed through Heroku.
     - 3: A modal will pop-up and show you the result of a friend that is compatible with you.
 
 * Links:
-https://www.heroku.com/
-https://expressjs.com/
-https://nodejs.org/
-https://getbootstrap.com/
+    * https://www.heroku.com/
+    * https://expressjs.com/
+    * https://nodejs.org/
+    * https://getbootstrap.com/
