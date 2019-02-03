@@ -1,8 +1,8 @@
 const friends = [
     {
-        "name":"Ahmed",
-        "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
-        "scores":[
+        "name": "Winston",
+        "photo": "https://cdn.vox-cdn.com/thumbor/pwpR2OnOOmDC1y8MgkmteFQqM98=/0x0:1920x1080/1400x1050/filters:focal(807x387:1113x693):format(jpeg)/cdn.vox-cdn.com/uploads/chorus_image/image/51761031/winston_overwatch.0.0.jpg",
+        "scores": [
             5,
             1,
             4,
@@ -13,12 +13,12 @@ const friends = [
             5,
             4,
             1
-          ]
-      },
-      {
-        "name":"Cat",
-        "photo":"https://cdn.shopify.com/s/files/1/0010/9215/7503/t/10/assets/cbt2/images/result-clipboard.png?11937793710462362784",
-        "scores":[
+        ]
+    },
+    {
+        "name": "Brigette",
+        "photo": "https://i.imgur.com/QIAjB9G.png",
+        "scores": [
             4,
             2,
             5,
@@ -29,12 +29,28 @@ const friends = [
             3,
             3,
             5
-          ]
-      },
-      {
-        "name":"Dog",
-        "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
-        "scores":[
+        ]
+    },
+    {
+        "name": "D.Va",
+        "photo": "https://www.owfire.com/images/heroes/potrait/dva.png",
+        "scores": [
+            3,
+            1,
+            4,
+            3,
+            4,
+            5,
+            5,
+            5,
+            5,
+            5
+        ]
+    },
+    {
+        "name": "Hanzo",
+        "photo": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/intermediary/f/79f59cdf-39ad-4360-adf1-5ce480305c1c/daafst5-3fe8564a-7114-4c30-a1fe-45bc7ef977c9.png",
+        "scores": [
             1,
             5,
             2,
@@ -45,8 +61,8 @@ const friends = [
             3,
             3,
             4
-          ]
-      }
+        ]
+    }
 ];
 
-  module.exports = friends;
+module.exports = friends;
