@@ -28,7 +28,7 @@
                         <h5>About You</h5>
                     </div>
                     <div class="card-body">
-                        <form role="form" class="needs-validation" novalidate>
+                        <form id="submit" role="form" class="needs-validation">
                             <div class="form-group">
                                 <label for="name">Name</label>
                                 <input type="text" class="form-control" id="name" required placeholder="Enter Your Name">
@@ -160,7 +160,7 @@
                                 </select>
                             </div>
                             <!-- Modal Button -->
-                            <button type="submit" class="btn btn-primary submit" id="submit">Submit</button>
+                            <button type="submit" class="btn btn-primary submit">Submit</button>
                         </form>
                     </div>
                 </div>
@@ -199,7 +199,7 @@
         </div>
 
         <script type="text/javascript">
-            $("#submit").on("click", (event) => {
+            $("#submit").on("submit", (event) => {
                 event.preventDefault();
 
                 var body = {
@@ -216,12 +216,26 @@
                     score9: $("#q9").val(),
                     score10: $("#q10").val()
                 };
+                var counter = 0
                 // A "for in" loop to loop through objects to validate inputs
-                // $.each(body, function (key, value) {
-                //     console.log(key, value)
-                                       
-                // });
+                $.each(body, function (key, value) {
+                    // if value == 0 then dont fire the post function and alert user
+                    if (value === 0) {
+                        counter--;
+                    } else {
+                        counter++
+                    };
+                });
 
+                console.log(counter)
+                if (counter >= 10) {
+                    postResult(body)
+                } else {
+                    alert("You have some missing inputs")
+                }
+            });
+         
+            function postResult(body) {
                 $.post("/api/friends", body, function (data) {
                     console.log(data)
 
@@ -246,7 +260,7 @@
                     $("#q9").val('0');
                     $("#q10").val('0');
                 })
-            });
+            }
         </script>
 </body>
 
