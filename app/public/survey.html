@@ -216,14 +216,14 @@
                     score9: $("#q9").val(),
                     score10: $("#q10").val()
                 };
-                var counter = 0
+                var counter = 0;
                 // A "for in" loop to loop through objects to validate inputs
                 $.each(body, function (key, value) {
                     // if value == 0 then dont fire the post function and alert user
                     if (value === 0) {
                         counter--;
                     } else {
-                        counter++
+                        counter++;
                     };
                 });
 
@@ -232,7 +232,7 @@
                     postResult(body)
                 } else {
                     alert("You have some missing inputs")
-                }
+                };
             });
          
             function postResult(body) {
@@ -259,8 +259,8 @@
                     $("#q8").val('0');
                     $("#q9").val('0');
                     $("#q10").val('0');
-                })
-            }
+                });
+            };
         </script>
 </body>
 
